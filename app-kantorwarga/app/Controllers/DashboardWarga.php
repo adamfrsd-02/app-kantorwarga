@@ -78,9 +78,16 @@ class DashboardWarga extends BaseController
         $tempdata = session()->getTempdata('data');
         $data['title'] = 'Status Pengajuan - LaporPak';
 
-        $kode = $tempdata['id_warga'];
+        
+        
+        
+
+        $kode = $tempdata['nik'];
         $data['surat'] = $this->ModelWarga->getAdministrasi($kode);
 
+        /*echo "<pre>";
+        print_r($data);
+        echo "</pre>";*/
 
         echo view('layout/header', $data);
         echo view('layout/navbar_warga', $tempdata);

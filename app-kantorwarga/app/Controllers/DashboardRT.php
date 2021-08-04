@@ -24,7 +24,7 @@ class DashboardRT extends BaseController
             $tempdata['jml_rt'] = $this->ModelRT->countRT();
             $tempdata['jml_wilayah'] = $this->ModelRT->countWilayah();
             $tempdata['corona'] = $this->CoronaAPI->getData();
-            $tempdata['perumahan'] = $this->ModelRT->getWilayah();
+            $tempdata['wilayah'] = $this->ModelRT->getPerumahan();
             $tempdata['pengajuan_all'] = $this->ModelRT->getPengajuan($kode);
             $tempdata['pengajuan_acc'] = $this->ModelRT->getPengajuanAcc($kode);
             $tempdata['pengajuan_dec'] = $this->ModelRT->getPengajuanDec($kode);
@@ -36,13 +36,13 @@ class DashboardRT extends BaseController
                 ];
 
             /*echo "<pre>";
-        print_r ($tempdata);
-        echo "</pre>";*/
-
+            print_r ($tempdata);
+            echo "</pre>";
+                /**/ 
             echo view('layout/header', $data);
             echo view('layout/navbar_rt', $tempdata);
             echo view('dashboard/rt/dashboard', $tempdata);
-            echo view('layout/footer');
+            echo view('layout/footer');/**/
             
     }
 

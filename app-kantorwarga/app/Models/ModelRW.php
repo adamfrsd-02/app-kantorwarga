@@ -26,7 +26,36 @@ class ModelRW extends Model
     {
         return $this->db->table('tbl_wilayah')->countAll();
     }
-    
+
+    public function getPengajuan()
+    {
+        return $this->db->table('tbl_administrasi')
+        ->countAllResults();
+    }
+
+    public function getPengajuanAccRT()
+    {
+        return $this->db->table('tbl_administrasi')
+        ->where('status_rt', '1')
+        ->countAllResults();
+    }
+
+    public function getAllSurat()
+    {
+        return $this->db->table('tbl_administrasi')
+        ->join('tbl_jenis_surat','tbl_jenis_surat.kode_jenis=tbl_administrasi.id_jenis')
+        ->join('tbl_warga','tbl_warga.id_warga=tbl_administrasi.id_warga')
+        ->where('status_rt','1')
+        ->get()->getResultArray();
+    }
+
+    public function getPengajuanDec($kode)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->where('id_rt', $kode)
+        ->where('status_rt', '2')
+        ->countAllResults();
+    }
     //get row 
     public function getDataRW()
     {
@@ -56,12 +85,35 @@ class ModelRW extends Model
         ->get()->getResultArray();
     }
 
+    public function getSurat($kode)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->where('id_surat', $kode)
+            ->get()->getRowArray();
+    }
+
     //delete
     public function deleteWarga($id)
     {
         return $this->db->table('tbl_warga')
         ->delete(['id_warga' => $id]);
     }
-    
 
+    //update
+    //update
+    public function setujuSurat($id, $data)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->set($data)
+        ->where('id_surat', $id)
+        ->update();
+    }
+
+    public function tolakSurat($id, $data)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->set($data)
+        ->where('id_surat', $id)
+        ->update();
+    }
 }

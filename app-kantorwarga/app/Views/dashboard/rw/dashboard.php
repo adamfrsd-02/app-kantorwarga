@@ -44,9 +44,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title mb-4"><i class="fas fa-copy"></i> Surat</h5>
-                                <h1 class="display-5 mt-1 mb-3">5 Pengajuan</h1>
+                                <h1 class="display-5 mt-1 mb-3"><?= $pengajuan_all?> Pengajuan</h1>
                                 <div class="mb-1"> <i class="mdi mdi-arrow-bottom-right"></i>
-                                    <span class="text-muted">2 Disetujui RT</span>
+                                    <span class="text-muted"><?= $pengajuan_acc?> Disetujui RT</span>
                                 </div>
                             </div>
                         </div>

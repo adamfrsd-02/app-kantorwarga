@@ -44,6 +44,12 @@ class Modelrt extends Model
         ;
     }
 
+    public function getPerumahan()
+    {
+        return $this->db->table('tbl_wilayah')
+        ->get()->getRowArray();
+    }
+
     public function countRT()
     {
         return $this->db->table('tbl_data_rt')->countAll();
@@ -55,10 +61,10 @@ class Modelrt extends Model
     }
     
     //get row 
-    public function getDataRT($id)
+    public function getDataRT($kode)
     {
         return $this->db->table('tbl_data_rt')
-        ->where('nik_ketua',$id)
+        ->where('nik_ketua',$kode)
         ->get()->getRowArray();
     }
 
@@ -94,11 +100,6 @@ class Modelrt extends Model
         ->get()->getResultArray();
     }
 
-    public function getWilayah()
-    {
-        return $this->db->table('tbl_wilayah')
-        ->get()->getRowArray();
-    }
 
     public function getRT($kode)
     {

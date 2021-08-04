@@ -59,7 +59,7 @@ class FlowdataRT extends BaseController
             
             $mpdf->UseTemplate($tplId);
             #$mpdf->WriteText(50,200,$ttd);
-            $mpdf->Image('./administrasi/tanda_tangan/'. $ttd, 35, 177, 60, 60, 'png');
+            $mpdf->Image('./administrasi/tanda_tangan/'. $ttd, 37, 185, 40,40, 'png');
             ob_clean();
             $mpdf->Output("./administrasi/surat_warga/" . $surat['file_surat'], "F");
             $mpdf->Output();

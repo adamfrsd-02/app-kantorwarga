@@ -28,15 +28,17 @@
                         <div class="card">
                             <div class="card-body mx-auto">
                                 <!--<h5 class="card-title mb-4 text-center"> Informasi RW</h5>-->
-                                <h1 class="display-5 mt-1 mb-3"><?= $perumahan['perumahan'] ?>, RT. <?= $rt['no_urut_rt'] ?></h1>
+                               <h1 class="display-5 mt-1 mb-3"><?= $wilayah['perumahan'] ?>, RT. <?= $rt['no_urut_rt'] ?></h1>
                                 <div class="mb-1  text-center"> <i class="mdi mdi-arrow-bottom-right"></i>
                                     <span class="text-muted">Ketua RT : <?= $rt['ketua_rt'] ?></span>
+                                </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
             <!-- info singkat -->
             <div class="col-md-12">
                 <div class="row">

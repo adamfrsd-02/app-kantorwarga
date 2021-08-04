@@ -126,6 +126,29 @@
                     </div>
                 </li>-->
                 <li class="has-sub">
+                    <a class="nav-link collapsed text-left" href="#admin" role="button" data-toggle="collapse" id="nav-item">
+                        <i class="fas fa-pencil-alt"></i> Manajemen Administrasi
+                    </a>
+                    <div class="collapse menu mega-dropdown" id="admin">
+                        <div class="dropmenu" aria-labelledby="navbarDropdown">
+                            <div class="container-fluid ">
+                                <div class="row">
+                                    <div class="col-lg-12 px-2">
+                                        <div class="submenu-box">
+                                            <ul class="list-unstyled m-0">
+                                                <li><a href="/dashboardrw/pengajuan_surat">Pengajuan Surat</a></li>
+                                                <li><a href="/home/comingsoon">Undangan & Pengumuman</a></li>
+                                                <li><a href="/home/comingsoon">Kotak Saran</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-sub">
                     <a class="nav-link collapsed text-left" href="#warga" role="button" data-toggle="collapse" id="nav-item">
                         <i class="fas fa-users"></i> Manajemen Kewargaan
                     </a>
@@ -281,7 +304,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-icon dropdown" href="#" id="alertsDropdown" data-toggle="dropdown" aria-expanded="false">
                                 <div class="position-relative">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $nama_lengkap;?></span>
+                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $nama_lengkap; ?></span>
                                     <img class="img-profile rounded-circle" src="resources/images/logo/android-icon-36x36.png">
 
                                 </div>

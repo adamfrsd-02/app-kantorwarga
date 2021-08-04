@@ -24,6 +24,8 @@ class DashboardRW extends BaseController
         $tempdata['jml_aktif'] = $this->ModelRW->countAktif();
         $tempdata['jml_rt'] = $this->ModelRW->countRT();
         $tempdata['jml_wilayah'] = $this->ModelRW->countWilayah();
+        $tempdata['pengajuan_all'] = $this->ModelRW->getPengajuan();
+        $tempdata['pengajuan_acc'] = $this->ModelRW->getPengajuanAccRT();
         //info rw
         $tempdata['rw'] = $this->ModelRW->getDataRW();
         //info kawal
@@ -95,6 +97,20 @@ class DashboardRW extends BaseController
         echo view('layout/footer');
     }
 
+    public function pengajuan_surat()
+    {
+        $tempdata = session()->getTempdata('data');
+        $data['title'] = 'Daftar Pengajuan - LaporPak';
+    
+        $data['surat'] = $this->ModelRW->getAllSurat();
+      
+        
+        echo view('layout/header', $data);
+        echo view('layout/navbar_rw', $tempdata);
+        echo view('dashboard/rw/data_administrasi', $data);
+        echo view('layout/footer');
+         
+    }
 
 }
 

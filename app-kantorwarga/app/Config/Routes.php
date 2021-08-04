@@ -73,6 +73,7 @@ $routes->group('dashboardrw', ['filter' => 'RWOnly'], function ($routes) {
 	$routes->add('data_warga','DashboardRW::data_warga');
 	$routes->add('data_rt','DashboardRW::data_rt');
 	$routes->add('informasi_wilayah','DashboardRW::data_wilayah');
+	$routes->add('pengajuan_surat','DashboardRW::pengajuan_surat');
 	
 });
 //dashboard rt

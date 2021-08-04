@@ -144,6 +144,7 @@ class ProsesKonfigurasi extends BaseController
                 'bendahara_rt' => $tempdata['bendahara'],
                 'no_telp' => $tempdata['no_telp'],
                 'no_urut_rt' => $tempdata['no_urut_rt'],
+                'nik_ketua' => $data_user['nik']
             ];
             $id = $tempdata['kode'];
 

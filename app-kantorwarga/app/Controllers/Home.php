@@ -6,7 +6,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		$data['title'] = 'Beranda - Kantor Warga';
+		$data['title'] = 'Beranda - LaporPak';
 		echo view('layout/header',$data);
 		echo view('beranda/homepage');
 		echo view('layout/footer');
@@ -14,7 +14,7 @@ class Home extends BaseController
 
 	public function login()
 	{
-		$data['title'] = 'Login - Kantor Warga';
+		$data['title'] = 'Login - LaporPak';
 		echo view('layout/header', $data);
 		echo view('beranda/login');
 		echo view('layout/footer');
@@ -22,7 +22,7 @@ class Home extends BaseController
 
 	public function how_to()
 	{
-		$data['title'] = 'Cara Penggunaan - Kantor Warga';
+		$data['title'] = 'Cara Penggunaan - LaporPak';
 		echo view('layout/header', $data);
 		echo view('beranda/how_to');
 		echo view('layout/footer');

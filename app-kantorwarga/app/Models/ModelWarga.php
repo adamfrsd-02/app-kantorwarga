@@ -66,7 +66,7 @@ class ModelWarga extends Model
         return $this->db->table('tbl_administrasi')
         ->join('tbl_jenis_surat', 'tbl_jenis_surat.kode_jenis=tbl_administrasi.id_jenis')
         ->join('tbl_warga', 'tbl_warga.id_warga=tbl_administrasi.id_warga')
-        ->where('id_warga', $kode)
+        ->where('tbl_administrasi.id_warga',$kode)
         ->get()->getResultArray();
     }
 

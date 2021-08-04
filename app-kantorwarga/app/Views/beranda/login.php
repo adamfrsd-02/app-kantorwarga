@@ -1,15 +1,15 @@
 <body>
-	
+
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('/resources/images/bg-01.jpg');">
 			<div class="wrap-login100">
 				<form method="POST" action="<?= base_url('Auth/login_proses') ?>" class="login100-form validate-form">
 					<span class="login100-form-logo">
-						<img src="/resources/images/logo/icon.png" class="shadow-lg" alt="" height="144" width="144">
+						<img src="/resources/logo/android-icon-144x144.png" class="shadow-lg" alt="" height="144" width="144">
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-30">
-						Kantor Warga
+						LaporPak
 					</span>
 
 					<div class="wrap-input100 validate-input">
@@ -39,6 +39,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 
 </body>
