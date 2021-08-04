@@ -136,9 +136,18 @@
                                     <div class="col-lg-12 px-2">
                                         <div class="submenu-box">
                                             <ul class="list-unstyled m-0">
-                                                <li><a href="/dashboardwarga/pengajuan_surat">Surat Pengantar</a></li>
-                                                <li><a href="/home/comingsoon">Pinjam Fasilitas <small>Coming Soon</small></a></li>
-                                                <li><a href="/home/comingsoon">Jadwal Ronda <small>Coming Soon</small></a></li>
+                                                <li>
+                                                    <a href="/dashboardwarga/pengajuan_surat">Surat Pengantar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/dashboardwarga/status_pengajuan">Status Pengajuan</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/home/comingsoon">Pinjam Fasilitas <small>Coming Soon</small></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/home/comingsoon">Jadwal Ronda <small>Coming Soon</small></a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>

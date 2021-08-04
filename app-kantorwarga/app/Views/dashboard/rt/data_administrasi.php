@@ -109,7 +109,7 @@
                                             <div class="modal-body">
                                                 <iframe src="<?= base_url('administrasi/surat_warga/' . $row['file_surat'] . '') ?>" frameborder="0" height="500" width="450"></iframe>
                                             </div>
-                                            <div class="modal-footer align-center">
+                                            <div class="modal-footer align-center <?= $row['status_rt'] == 1 ? 'd-none' : '' ?>">
                                                 <a type="button" class="btn btn-danger text-light" data-target="#comment<?= $row['id_surat'] ?>" data-toggle="modal" data-dismiss="modal">Tolak &nbsp;<i class="fas fa-times"></i></a>
 
                                                 <a type="button" data-target="#setuju<?= $row['id_surat']?>" data-toggle="modal" data-dismiss="modal" class="btn btn-primary text-light">Setujui &nbsp;<i class="fas fa-check"></i></a>

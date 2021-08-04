@@ -24,7 +24,7 @@ class DashboardRT extends BaseController
             $tempdata['jml_rt'] = $this->ModelRT->countRT();
             $tempdata['jml_wilayah'] = $this->ModelRT->countWilayah();
             $tempdata['corona'] = $this->CoronaAPI->getData();
-            $tempdata['perumahan'] = $this->ModelRT->getAllWilayah();
+            $tempdata['perumahan'] = $this->ModelRT->getWilayah();
             $tempdata['pengajuan_all'] = $this->ModelRT->getPengajuan($kode);
             $tempdata['pengajuan_acc'] = $this->ModelRT->getPengajuanAcc($kode);
             $tempdata['pengajuan_dec'] = $this->ModelRT->getPengajuanDec($kode);

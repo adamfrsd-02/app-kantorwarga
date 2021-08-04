@@ -164,6 +164,8 @@ class ProsesKonfigurasi extends BaseController
             echo " alert('Berhasil Daftar. Silahkan Login !');      
             window.location.href='" . base_url('/') . "';
             </script>";
+        }else{
+            return 1;
         }
             
         

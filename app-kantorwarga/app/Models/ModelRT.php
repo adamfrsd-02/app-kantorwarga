@@ -7,6 +7,28 @@ use CodeIgniter\Model;
 class Modelrt extends Model
 {
     //count
+    public function getPengajuan($kode)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->where('id_rt', $kode)
+            ->countAllResults();
+    }
+
+    public function getPengajuanAcc($kode)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->where('id_rt', $kode)
+            ->where('status_rt', '1')
+            ->countAllResults();
+    }
+
+    public function getPengajuanDec($kode)
+    {
+        return $this->db->table('tbl_administrasi')
+        ->where('id_rt', $kode)
+            ->where('status_rt', '2')
+            ->countAllResults();
+    }
     public function countWarga($kode)
     {
         return $this->db->table('tbl_warga')->where('kode_rt',$kode)->countAllResults();
@@ -72,27 +94,10 @@ class Modelrt extends Model
         ->get()->getResultArray();
     }
 
-    public function getPengajuan($kode)
+    public function getWilayah()
     {
-        return $this->db->table('tbl_administrasi')
-        ->where('id_rt',$kode)
-        ->countAllResults();
-    }
-
-    public function getPengajuanAcc($kode)
-    {
-        return $this->db->table('tbl_administrasi')
-        ->where('id_rt', $kode)
-        ->where('status_rt', '1')
-        ->countAllResults();
-    }
-
-    public function getPengajuanDec($kode)
-    {
-        return $this->db->table('tbl_administrasi')
-        ->where('id_rt', $kode)
-        ->where('status_rt', '2')
-        ->countAllResults();
+        return $this->db->table('tbl_wilayah')
+        ->get()->getRowArray();
     }
 
     public function getRT($kode)

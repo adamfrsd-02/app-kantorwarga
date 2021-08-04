@@ -49,6 +49,7 @@ class FlowdataRT extends BaseController
         $query = $this->ModelRT->setujuSurat($id, $data);
 
         if ($query) {
+
             $mpdf = new Mpdf();
 
             ob_clean();
@@ -57,8 +58,10 @@ class FlowdataRT extends BaseController
             $tplId = $mpdf->ImportPage($page);
             
             $mpdf->UseTemplate($tplId);
-            $mpdf->Image('/administrasi/tanda_tangan' . $ttd . '/', 0, 0, 210, 297, 'jpg', '', true);
+            #$mpdf->WriteText(50,200,$ttd);
+            $mpdf->Image('./administrasi/tanda_tangan/'. $ttd, 35, 177, 60, 60, 'png');
             ob_clean();
+            $mpdf->Output("./administrasi/surat_warga/" . $surat['file_surat'], "F");
             $mpdf->Output();
 
             

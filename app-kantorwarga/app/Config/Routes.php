@@ -44,6 +44,7 @@ $routes->add('/config_rw2', 'Konfigurasi::config_rw2');
 $routes->add('/config_rw/pendataan_rt','ProsesKonfigurasi::kode_rt');
 $routes->add('/config_rw/pendataan_rw','ProsesKonfigurasi::konfig_rw');
 $routes->add('/config_rw/data_pribadirw','ProsesKonfigurasi::konfig_profil');
+$routes->add('/konfigurasi/config_profil','Konfigurasi::config_profil');
 //end konfig rw}
 
 //konfig rt{

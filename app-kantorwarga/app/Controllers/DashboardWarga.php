@@ -73,6 +73,21 @@ class DashboardWarga extends BaseController
         echo view('layout/footer');
     }
 
+    public function status_pengajuan()
+    {
+        $tempdata = session()->getTempdata('data');
+        $data['title'] = 'Status Pengajuan - LaporPak';
+
+        $kode = $tempdata['id_warga'];
+        $data['surat'] = $this->ModelWarga->getAdministrasi($kode);
+
+
+        echo view('layout/header', $data);
+        echo view('layout/navbar_warga', $tempdata);
+        echo view('dashboard/warga/data_administrasi', $data);
+        echo view('layout/footer');
+    }
+
     /*public function data_warga()
     {
         $data['warga'] = $this->ModelRW->getAllWarga();
